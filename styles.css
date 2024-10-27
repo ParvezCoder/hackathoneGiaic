@@ -1,143 +1,212 @@
-/* General Styling */
-body, html {
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #90cdf4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: #333;
+  color: white;
 }
 
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  margin-top: 40px;
+  max-width: 700px;
+  padding: 20px;
+  background-color: black;
+  border: 1px solid blue;
+  box-shadow: 0px 0px 5px blue;
+  border-radius: 15px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Section Titles */
-.section-title {
-  font-size: 1.875rem;
-  color: #2b6cb0;
-  font-weight: bold;
-  border-bottom: 2px solid #3182ce;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-  
-}
-.section-title2 {
-  font-size: 1.7rem;
-  color: #2b6cb0;
-  font-weight: bold;
-  border-bottom: 2px solid #3182ce;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px blue;
 }
 
-/* Personal Information */
-.personal-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+h3 {
+  text-align: center;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  margin: 4px 0;
+.heading {
+  text-align: center;
+  padding: 10px;
+  border: 2px dotted blue;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px blue;
+  background-color: #141e30;
+  color: white;
+  font-size: 24px;
+  text-shadow: 0px 0px 10px blue;
 }
+.heading:hover{
+  /* transform: scale(2); */
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px blue;
 
-.linkedin-link {
-  color: #f56565;
-  text-decoration: none;
+
 }
-
-.profile-pic {
-  border-radius: 12px;
-  width: 130px;
-  height: 150px;
-  object-fit: cover;
-}
-
-/* Skills Section */
-.skills-list {
-  display: flex;
-  flex-direction: row;
-  /* gap: 12px; */
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  margin-top: 16px;
-}
-
-.skill-item {
-  padding: 4px 8px;
-  /* border: 2px solid #3182ce; */
-  border-bottom: 4px solid blue;
-  border-bottom-width: 4px;
-  font-weight: bold;
-  display: flex;
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.skill-item:hover {
-  background-color: #3182ce;
-  color: #fff;
-}
-
-.toggle-button {
-  margin-top: 16px;
-  background-color: #3182ce;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
+form section {
+  margin-bottom: 20px;
+  padding: 10px;
+  /* border-left: 4px solid blue; */
   transition: background-color 0.3s;
 }
 
-.toggle-button:hover {
-  background-color: #2b6cb0;
+/* form section:hover {
+  background-color: #cd1616;
+width: 100%;
+} */
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-/* Footer */
-.footer {
-  text-align: center;
-  margin-top: 60px;
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #222;
+  color: white;
+  transition: border-color 0.3s;
 }
 
-.text-center {
-  margin-top: 15px;
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: blue;
+  box-shadow: 0px 0px 5px blue;
 }
-.personal-info {
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: rgb(2, 2, 97);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 0px 10px blue;
+}
+
+.resume-output {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  background-color: #1b1b1b;
+}
+
+.profile-image {
+  width: 140px;
+  height: 90px;
+  border-radius: 25px;
+  border: 2px solid blue;
+  box-shadow: 0px 0px 10px blue;
+  margin-bottom: 10px;
+}
+
+.edit-btn {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.resume-output h2,
+.resume-output h3 {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  font-size: 18px;
+  padding: 5px 0;
+  border-bottom: 1px solid #333;
 }
 
-.profile-pic {
-  width: 130px;
-  height: 150px;
-  border-radius: 8px;
-  object-fit: cover;
+.resume-output ul li {
+  list-style: none;
+  background-color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: inline-block;
+  color: white;
+  transition: background-color 0.3s;
 }
 
-/* Media query for small screens */
-@media (max-width: 600px) {
-  .personal-info {
-    flex-direction: column;
-    text-align: center;
-  }
+.resume-output ul li:hover {
+  background-color: #333;
+  cursor: pointer;
+}
 
-  .profile-pic {
-    margin-top: 8px;
-  }
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-  .section-title {
-    text-align: center;
-  }
+.container, .resume-output, form section {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.borderBottom {
+  display: inline-block;
+  border-bottom: 3px solid blue !important;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+
+.borderBottom2 {
+  display: inline-block; /* This ensures the border only covers the text */
+
+  border-bottom: 3px solid blue; /* Style for the bottom border */
+  padding-bottom: 5px; /* Optional: Adds some space between the text and the border */
+  margin-bottom: 5px; /* Optional: Adds space below the heading */
+}
+
+
+
+.image-edit-container {
+  display: flex;                     /* Set display to flex */
+  align-items: center;              /* Vertically center the items */
+  justify-content: space-between;    /* Distribute space between items */
+  margin-bottom: 10px;              /* Optional: space below the container */
+}
+
+.profile-image {
+  width: 200px;
+  height: 250px;                     /* Set a fixed width for the image */
+  margin-right: 10px;              /* Space between the image and button */
 }
