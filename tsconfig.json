@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",  // Specify the output directory
+    "module": "commonjs", // Use 'commonjs' for module resolution
+    "target": "es5",
+    "strict": true,
+    "esModuleInterop": true, // Enable interop between CommonJS and ES Modules
+    "skipLibCheck": true    // Skip type checking for declaration files
+  },
+  "include": [
+    "App.ts",  // Ensure your app.ts is included
+    "declarations.d.ts" // Make sure to include your declaration file
+  ]
+}

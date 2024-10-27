@@ -1,52 +1,57 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Resume Builder</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
-  <div class="container">
-    <h3><span class="heading">Dynamic Resume Builder</span></h3>
+    <div class="container">
+        <h3><span class="heading">Dynamic Resume Builder</span></h3>
 
-    <!-- Form to capture resume data -->
-    <form id="resumeForm">
-      <section>
-        <h4 class="borderBottom">Personal Information</h4>
-        <label class=""><span class="borderBottom2">Name:</span> <input type="text" id="name"  /></label>
-        <label class=""><span class="borderBottom2">Email:</span><input type="email" id="email"  /></label>
-        <label><span class="borderBottom2">Prifile Image:</span><input type="file" id="profileImage" accept="image/*" /></label>
-      </section>
+        <!-- Form to capture resume data -->
+        <form id="resumeForm">
+            <section>
+                <h4 class="borderBottom">Personal Information</h4>
+                <label><span class="borderBottom2">Name:</span> <input type="text" id="name" /></label>
+                <label><span class="borderBottom2">Email:</span><input type="email" id="email" /></label>
+                <label><span class="borderBottom2">Profile Image:</span><input type="file" id="profileImage" accept="image/*" /></label>
+            </section>
 
-      <section>
-        <h4 class="borderBottom">Education</h4>
-        <textarea id="education" placeholder="Describe your education"></textarea>
-      </section>
+            <section>
+                <h4 class="borderBottom">Education</h4>
+                <textarea id="education" placeholder="Describe your education"></textarea>
+            </section>
 
-      <section>
-        <h4 class="borderBottom">Work Experience</h4>
-        <textarea id="workExperience" placeholder="Describe your work experience"></textarea>
-      </section>
+            <section>
+                <h4 class="borderBottom">Work Experience</h4>
+                <textarea id="workExperience" placeholder="Describe your work experience"></textarea>
+            </section>
 
-      <section>
-        <h4 class="borderBottom">Skills</h4>
-        <textarea id="skills" placeholder="List your skills, separated by commas"></textarea>
-      </section>
+            <section>
+                <h4 class="borderBottom">Skills</h4>
+                <textarea id="skills" placeholder="List your skills, separated by commas"></textarea>
+            </section>
 
-      <button type="submit">Generate Resume</button>
-    </form>
+            <button type="submit">Generate Resume</button>
+        </form>
 
-    <!-- Section to display the generated resume -->
-    <div id="resumeOutput" class="resume-output">
+        <!-- Section to display the generated resume -->
+        <div id="resumeOutput" class="resume-output"></div>
 
+        <!-- Buttons for sharing and downloading -->
+        <div id="shareDownloadButtons" class="hidden">
+            <button id="shareLink">Share Link</button>
+            <button id="downloadPdf">Download PDF</button>
+        </div>
     </div>
-  </div>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
